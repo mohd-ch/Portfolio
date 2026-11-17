@@ -455,3 +455,7 @@ p, .lede, .row-s, .hs-d, .proof-d, .tc-pts li span { text-wrap: pretty; }
 .feat-go { margin-top: auto; padding-top: 6px; font-weight: 600; color: var(--brass); border-bottom: 2px solid var(--brass); padding-bottom: 2px; }
 .rows-label { margin-bottom: 14px; font-size: var(--t-label); font-weight: 600; color: var(--brass-d); }
 @media (max-width: 760px) { .feat { grid-template-columns: minmax(0, 1fr); } }
+.ba.logos .rp-frame { display: grid; place-items: center; padding: 16px; background: #fff; }
+.ba.logos .rp-frame img { max-height: 110px; width: auto; max-width: 100%; object-fit: contain; }
+.ba.logos { align-items: start; }
+.ba.logos .rp-frame { height: 150px; border-radius: var(--r-md); border: 1px solid var(--line); }

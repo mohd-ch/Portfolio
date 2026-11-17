@@ -91,13 +91,38 @@ window.SITE = {
       },
       {
         t: "The site today",
-        p: "The home page now opens with what the company can take on, from the first requirement through implementation and long-term operation, and offers one clear way to ask for a quote.",
+        p: "The About page now states what the company is, shows its delivery process in five clear steps, from the first requirement to ongoing support, and the site offers one clear way to ask for a quote.",
       },
     ],
+    visual: {
+      title: "The About page: before and after",
+      before: {
+        base: "assets/img/neosmart-about-before",
+        alt: "Archived Neo Smart company overview page, written as paragraphs only",
+        t: "Before: paragraphs only",
+        d: "A written company overview, from an archive of the old site. Range, industries and support were all in running text.",
+      },
+      after: {
+        base: "assets/img/neosmart-about-after",
+        alt: "Neo Smart About page today, with positioning and proof points",
+        t: "After: positioning and proof, up front",
+        d: "What the company is, what it supplies and the numbers behind it, in one clear opening.",
+      },
+      process: {
+        base: "assets/img/neosmart-process-after",
+        alt: "Neo Smart five-step delivery process from understanding the requirement to support",
+        t: "The delivery process, made visible",
+        d: "Understand, source and configure, deliver and install, commission and train, support and maintain. A customer can see what happens after they enquire.",
+      },
+      logos: [
+        { base: "assets/img/neosmart-logo-before", alt: "Neo Smart earlier stacked flask logo", t: "Earlier logo", d: "A stacked flask emblem with the company name beneath." },
+        { base: "assets/img/neosmart-logo-after", alt: "Neo Smart current horizontal logo with the tagline Accelerating Scientific Progress", t: "Logo today", d: "A horizontal wordmark with the line Accelerating Scientific Progress." },
+      ],
+    },
     delivered: {
       t: "What I delivered",
       items: [
-        { t: "Website", d: "Messaging and page structure rebuilt around the company\u2019s full scope, with one clear route to requesting a quote." },
+        { t: "Website", d: "Messaging and page structure rebuilt around the company\u2019s full scope. The About page now shows how a project is delivered, and there is one clear route to requesting a quote." },
         { t: "One identity", d: "The website, catalogue, company profile and visiting cards now look and read as one company." },
         { t: "Company profile and catalogue", d: "The web catalogue and the way we present in front of clients and stakeholders, rebuilt from scratch around the same direction." },
         { t: "ArabLab", d: "I coordinated the whole ArabLab effort with the team and made the event a success. Neo Smart led the presentation, with VWR and IRIS fitting in as partners." },
@@ -124,7 +149,7 @@ window.SITE = {
     lede: "Start with where I am now, then see the whole story in the order it happened.",
     featured: [
       { id: "case", tag: "Neo Smart \u00b7 Now", t: "Running the operation as the business scales", d: "I run IT, administration, inventory and HR, and built the in-house system management reads the business from.", proof: "Live now: document and compliance tracking, with expired and upcoming renewals at the top.", cta: "Read the case" },
-      { id: "positioning", tag: "Neo Smart \u00b7 Brand", t: "Making a whole company visible", d: "Website, catalogue, company profile and cards brought together as one identity, and ArabLab coordinated.", proof: "The website now opens with what the company can take on, not only a list of products.", cta: "Read the case" },
+      { id: "positioning", tag: "Neo Smart \u00b7 Brand", t: "Making a whole company visible", d: "Website, catalogue, company profile and cards brought together as one identity, and ArabLab coordinated.", proof: "The About page now shows how a project is delivered, in five clear steps.", cta: "Read the case" },
     ],
     allLabel: "The full story, in order",
   },
