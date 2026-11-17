@@ -95,7 +95,21 @@ window.SITE = {
       },
     ],
     visual: {
-      title: "The About page: before and after",
+      title: "The home page and About page, before and after",
+      home: {
+        before: {
+          base: "assets/img/neosmart-home-before",
+          alt: "Archived Neo Smart home page introduction, written as a short paragraph",
+          t: "Before: a supplier introduction",
+          d: "From an archive of the old site. The company was introduced as a laboratory equipment supplier, in text.",
+        },
+        after: {
+          base: "assets/img/neosmart-home-after",
+          alt: "Neo Smart home page today with the headline From vision to operation",
+          t: "After: \u201cFrom vision to operation.\u201d",
+          d: "The full project scope leads the page, with a clear way to request a quote.",
+        },
+      },
       before: {
         base: "assets/img/neosmart-about-before",
         alt: "Archived Neo Smart company overview page, written as paragraphs only",
