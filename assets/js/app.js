@@ -248,7 +248,7 @@
       <dialog class="sheet" ref="dlg" aria-labelledby="sheet-t" @close="onClose" @click="backdrop">
         <div class="sheet-in" v-if="cur">
           <button class="sheet-x" type="button" @click="closeSheet" aria-label="Close project details">&times;</button>
-          <p class="tag">{{ cur.tag }}</p>
+          <p class="tag">{{ cur.points ? cur.meta : cur.tag }}</p>
           <h2 id="sheet-t">{{ cur.title }}</h2>
 
           <template v-if="cur.kind === 'ops'">
@@ -274,12 +274,12 @@
             <div class="ba stack"><case-shot kind="plain" optional :base="S.repositioning.visual.process.base" :alt="S.repositioning.visual.process.alt" :caption="S.repositioning.visual.process.t" :text="S.repositioning.visual.process.d"></case-shot></div>
             <div class="ba logos"><case-shot v-for="g in S.repositioning.visual.logos" :key="g.base" kind="plain" optional :base="g.base" :alt="g.alt" :caption="g.t" :text="g.d"></case-shot></div>
             <h3 class="sheet-h">{{ S.repositioning.delivered.t }}</h3>
-            <ul class="deliv"><li v-for="i in S.repositioning.delivered.items" :key="i.t"><b>{{ i.t }}</b><span>{{ i.d }}</span></li></ul>
+            <ul class="deliv two"><li v-for="i in S.repositioning.delivered.items" :key="i.t"><b>{{ i.t }}</b><span>{{ i.d }}</span></li></ul>
             <div class="ba"><case-shot v-for="g in S.repositioning.gallery" :key="g.base" kind="plain" optional :base="g.base" :alt="g.alt" :caption="g.t" :text="g.d"></case-shot></div>
           </template>
 
           <template v-else>
-            <p class="meta">{{ cur.meta }}</p>
+            <p class="meta" v-if="!cur.points">{{ cur.meta }}</p>
             <p class="sheet-lede">{{ cur.d }}</p>
             <ul class="deliv pts" v-if="cur.points"><li v-for="p in cur.points" :key="p.t"><b>{{ p.t }}</b><span>{{ p.d }}</span></li></ul>
             <a v-if="cur.link" class="btn btn-solid" :href="cur.link.href" target="_blank" rel="noopener">{{ cur.link.label }}</a>
