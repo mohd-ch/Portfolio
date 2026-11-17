@@ -119,7 +119,7 @@
         cur.value = t;
         nextTick(function () {
           var d = dlg.value;
-          if (d && !d.open) d.showModal();
+          if (d && !d.open) { if (typeof d.showModal === "function") d.showModal(); else d.setAttribute("open", ""); }
           document.documentElement.classList.add("lock");
           try { history.replaceState(null, "", "#" + id); } catch (e) {}
         });
@@ -140,7 +140,7 @@
       }
 
       onMounted(function () {
-        if (S.cv && S.cv.href && window.fetch) {
+        if (S.cv && S.cv.href && window.fetch && location.protocol !== "file:") {
           fetch(S.cv.href, { method: "HEAD", cache: "no-store" }).then(function (r) {
             if (!r.ok) return;
             var m = Date.parse(r.headers.get("Last-Modified") || "");

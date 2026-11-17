@@ -504,3 +504,49 @@ p, .lede, .row-s, .hs-d, .proof-d, .tc-pts li span { text-wrap: pretty; }
 .deliv.seq li::after { content: counter(st); position: absolute; left: 0; top: 16px; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #fff; font-family: var(--display); font-size: 1.1rem; line-height: 1; }
 .sheet-h + .deliv.seq { margin-top: 16px; }
 @media (max-width: 640px) { .deliv.seq li { padding-left: 48px; } }
+
+/* ---------- Final audit layer: devices, touch, browsers ---------- */
+/* Touch targets: larger hit areas without changing the look */
+.text-link, #site-nav a, .mark { position: relative; }
+.text-link::after, #site-nav a::after, .mark::after { content: ""; position: absolute; inset: -10px -6px; }
+#site-nav a.on { text-decoration-thickness: 2px; }
+.btn, .nav-toggle, .sheet-x { min-height: 44px; }
+
+/* Sheets: use the dynamic viewport on phones so the address bar never hides the bottom */
+.sheet { max-height: calc(100vh - 48px); max-height: calc(100dvh - 48px); }
+.sheet-in { max-height: calc(100vh - 48px); max-height: calc(100dvh - 48px); overscroll-behavior: contain; }
+html.lock { overflow: hidden; }
+
+/* Hero: tablets and landscape phones keep the photo beside the words */
+@media (min-width: 700px) and (max-width: 980px) {
+  .hero-in { grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 0 clamp(24px, 4vw, 44px); align-items: center; }
+  .hero-photo { margin-top: 0; max-width: none; padding-bottom: 0; }
+  .portrait { aspect-ratio: 4 / 5; min-height: 0; }
+}
+@media (max-width: 699px) {
+  .hero-photo { max-width: 340px; }
+  .portrait { aspect-ratio: 5 / 6; }
+}
+@media (max-height: 460px) and (min-width: 700px) {
+  .hero { padding-block: 20px 0; }
+  .intro-name { font-size: 2.2rem; }
+  .hero h1 { font-size: 1.7rem; }
+  .hero-side { gap: 14px; margin-top: 12px; }
+  .hero-copy .lede { font-size: 0.98rem; }
+  .hero-photo { max-width: 210px; }
+}
+
+/* Large and ultra-wide screens: keep the composition centred and calm */
+@media (min-width: 1700px) {
+  html { font-size: 106%; }
+}
+/* Windows high contrast and forced colours: keep buttons and cards visible */
+@media (forced-colors: active) {
+  .btn, .feat-card, .row, .sheet-x { border: 1px solid ButtonText; }
+}
+/* Print: a clean readable page if someone prints or saves as PDF */
+@media print {
+  .site-header, .nav-toggle, .hero-cta, .contact-actions, .sheet { display: none !important; }
+  .hero, .contact { background: #fff !important; color: #000 !important; }
+  [data-rv] { opacity: 1 !important; transform: none !important; }
+}
