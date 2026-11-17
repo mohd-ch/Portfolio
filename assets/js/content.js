@@ -40,6 +40,10 @@ window.SITE = {
         p: "I mapped how the work moves between those teams, then proposed clearer ownership for each step, defined handovers between teams, and shared records that everyone works from.",
       },
       {
+        t: "What management can see now",
+        p: "Document and compliance tracking is live. Every tracked document sits in one list with expired and upcoming renewals at the top, and a management overview shows compliance, asset use and the documents that need action.",
+      },
+      {
         t: "What I owned",
         p: "The workflow design, the phased rollout of the in-house system, coordination across teams and outside partners, inventory and stock valuation, inventory reporting, and the HR side of the business.",
       },
@@ -85,26 +89,15 @@ window.SITE = {
         t: "Positioning decision",
         p: "\u201cFrom Vision to Operation\u201d expresses the full scope of support, from the idea for a laboratory to a working one. I guided and supervised the digital team to refresh the company\u2019s identity, and carried the brand strategy through the website, the catalogue, the way we present to clients and stakeholders, and the company\u2019s events.",
       },
+      {
+        t: "The site today",
+        p: "The home page now opens with what the company can take on, from the first requirement through implementation and long-term operation, and offers one clear way to ask for a quote.",
+      },
     ],
-    visual: {
-      title: "The website: before and after",
-      before: {
-        base: "assets/img/neosmart-before",
-        alt: "Neo Smart website home page before the repositioning",
-        t: "Before: products first",
-        d: "A long grid of individual items. A buyer had to know what to look for.",
-      },
-      after: {
-        base: "assets/img/neosmart-after",
-        alt: "Neo Smart website home page after the repositioning",
-        t: "After: solutions first",
-        d: "Solutions grouped by what a laboratory is trying to do, with one clear way to request a quote. The decision: lead with the customer\u2019s project, not the catalogue.",
-      },
-    },
     delivered: {
       t: "What I delivered",
       items: [
-        { t: "Website", d: "Messaging and page structure rebuilt around solutions, with a clearer customer journey from exploring solutions to requesting a quote." },
+        { t: "Website", d: "Messaging and page structure rebuilt around the company\u2019s full scope, with one clear route to requesting a quote." },
         { t: "One identity", d: "The website, catalogue, company profile and visiting cards now look and read as one company." },
         { t: "Company profile and catalogue", d: "The web catalogue and the way we present in front of clients and stakeholders, rebuilt from scratch around the same direction." },
         { t: "ArabLab", d: "I coordinated the whole ArabLab effort with the team and made the event a success. Neo Smart led the presentation, with VWR and IRIS fitting in as partners." },
@@ -128,7 +121,12 @@ window.SITE = {
 
   work: {
     title: "The journey so far",
-    lede: "Seven pieces of work, in the order I did them. Open any one to see what I owned.",
+    lede: "Start with where I am now, then see the whole story in the order it happened.",
+    featured: [
+      { id: "case", tag: "Neo Smart \u00b7 Now", t: "Running the operation as the business scales", d: "I run IT, administration, inventory and HR, and built the in-house system management reads the business from.", proof: "Live now: document and compliance tracking, with expired and upcoming renewals at the top.", cta: "Read the case" },
+      { id: "positioning", tag: "Neo Smart \u00b7 Brand", t: "Making a whole company visible", d: "Website, catalogue, company profile and cards brought together as one identity, and ArabLab coordinated.", proof: "The website now opens with what the company can take on, not only a list of products.", cta: "Read the case" },
+    ],
+    allLabel: "The full story, in order",
   },
 
   how: {

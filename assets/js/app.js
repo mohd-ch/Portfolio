@@ -165,7 +165,7 @@
             var io = new IntersectionObserver(function (es) {
               es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
             }, { threshold: 0.15, rootMargin: "0px 0px -6% 0px" });
-            document.querySelectorAll(".work .big, .work-lede, .journey, .rows .row, .trio .big, .trio-lede, .trio-cards, .how-head, .how-phases, .steps, .steps li, .about-text, .aim, .edu-block, .contact h2, .contact-lede, .path-card, .next li, .direct, .trio-cta").forEach(function (el) {
+            document.querySelectorAll(".work .big, .work-lede, .feat, .rows-label, .rows .row, .trio .big, .trio-lede, .trio-cards, .how-head, .how-phases, .steps, .steps li, .about-text, .aim, .edu-block, .contact h2, .contact-lede, .path-card, .next li, .direct, .trio-cta").forEach(function (el) {
               var p = el.parentElement, n = seen.get(p) || 0;
               seen.set(p, n + 1);
               el.setAttribute("data-rv", "");
@@ -199,6 +199,16 @@
         <section class="section work" id="work" aria-labelledby="work-t"><div class="wrap">
           <h2 class="big" id="work-t">{{ S.work.title }}</h2>
           <p class="work-lede">{{ S.work.lede }}</p>
+          <div class="feat">
+            <button v-for="f in S.work.featured" :key="f.id" type="button" class="feat-card" @click="openTile(f.id)">
+              <span class="feat-tag">{{ f.tag }}</span>
+              <span class="feat-t">{{ f.t }}</span>
+              <span class="feat-d">{{ f.d }}</span>
+              <span class="feat-proof">{{ f.proof }}</span>
+              <span class="feat-go">{{ f.cta }}</span>
+            </button>
+          </div>
+          <h3 class="rows-label">{{ S.work.allLabel }}</h3>
           <ul class="rows">
             <li v-for="t in rows" :key="t.id">
               <button type="button" class="row" :id="'tile-' + t.id" @click="openTile(t.id)" :aria-label="t.title + ', open details'">
@@ -243,7 +253,7 @@
 
           <template v-if="cur.kind === 'ops'">
             <p class="sheet-lede">{{ S.neoCase.role }}</p>
-            <div class="sheet-parts"><article v-for="x in S.neoCase.parts" :key="x.t"><h3>{{ x.t }}</h3><p>{{ x.p }}</p></article></div>
+            <div class="sheet-parts two"><article v-for="x in S.neoCase.parts" :key="x.t"><h3>{{ x.t }}</h3><p>{{ x.p }}</p></article></div>
             <div class="status"><div class="status-lead"><h3>{{ S.neoCase.progress.t }}</h3><p>{{ S.neoCase.progress.p }}</p></div>
               <div class="status-col" v-for="g in [S.neoCase.progress.inUse, S.neoCase.progress.rolling]" :key="g.t"><h4>{{ g.t }}</h4><ul><li v-for="i in g.items" :key="i.t">{{ i.t }}</li></ul></div></div>
             <div class="ba stack"><case-shot v-for="g in S.neoCase.gallery" :key="g.base" kind="plain" optional :base="g.base" :alt="g.alt" :caption="g.t" :text="g.d"></case-shot></div>
@@ -251,12 +261,7 @@
 
           <template v-else-if="cur.kind === 'brand'">
             <p class="sheet-lede">{{ S.repositioning.lede }}</p>
-            <div class="sheet-parts two"><article v-for="x in S.repositioning.parts" :key="x.t"><h3>{{ x.t }}</h3><p>{{ x.p }}</p></article></div>
-            <h3 class="sheet-h">{{ S.repositioning.visual.title }}</h3>
-            <div class="ba">
-              <case-shot kind="before" :base="S.repositioning.visual.before.base" :alt="S.repositioning.visual.before.alt" :caption="S.repositioning.visual.before.t" :text="S.repositioning.visual.before.d"></case-shot>
-              <case-shot kind="after" :base="S.repositioning.visual.after.base" :alt="S.repositioning.visual.after.alt" :caption="S.repositioning.visual.after.t" :text="S.repositioning.visual.after.d"></case-shot>
-            </div>
+            <div class="sheet-parts"><article v-for="x in S.repositioning.parts" :key="x.t"><h3>{{ x.t }}</h3><p>{{ x.p }}</p></article></div>
             <h3 class="sheet-h">{{ S.repositioning.delivered.t }}</h3>
             <ul class="deliv"><li v-for="i in S.repositioning.delivered.items" :key="i.t"><b>{{ i.t }}</b><span>{{ i.d }}</span></li></ul>
             <div class="ba"><case-shot v-for="g in S.repositioning.gallery" :key="g.base" kind="plain" optional :base="g.base" :alt="g.alt" :caption="g.t" :text="g.d"></case-shot></div>
