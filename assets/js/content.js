@@ -14,8 +14,7 @@ window.SITE = {
 
   hero: {
     title: "I run the operation behind a growing business.",
-    lede:
-      "I lead the teams, build the processes and run the systems that let a business grow. I have led developers and support teams, built the reporting management decides from, and brought a company\u2019s brand together.",
+    lede: "I lead teams, build processes and run the systems that let a business grow.",
     lines: ["I run the operation", "behind a growing", "business."],
     cta: "See what I have built",
     ctaTarget: "#work",
@@ -129,13 +128,7 @@ window.SITE = {
 
   work: {
     title: "The journey so far",
-    lede: "Each role widened what I was trusted with: a support team, then client delivery, now a company\u2019s operations.",
-    steps: [
-      { y: "2023", t: "Support lead, then management reporting" },
-      { y: "2024", t: "BIM and 3D visualisation" },
-      { y: "2026", t: "Client software delivery" },
-      { y: "Now", t: "Operations beside management" },
-    ],
+    lede: "Seven pieces of work, in the order I did them. Open any one to see what I owned.",
   },
 
   how: {
@@ -293,65 +286,16 @@ window.SITE = {
     catalogue: "A quote-first site: customers send a part number, drawing or list and get an offer back.",
     dashboard: "A Power BI view that lets a corporate team read sales performance at a glance.",
   },
-  triad: [
-    {
-      t: "People",
-      lead: "I get teams pulling the same way.",
-      pts: [
-        { t: "Led developers, coordinators and a support team, and trained juniors.", w: "Brototype \u00b7 Olivo" },
-        { t: "Met clients and stakeholders and turned their feedback into fixes.", w: "Brototype" },
-        { t: "Briefed developers, split the work and followed up until it shipped.", w: "Olivo" },
-      ],
-    },
-    {
-      t: "Process",
-      lead: "I stop work getting lost between teams.",
-      pts: [
-        { t: "Requirements approved in writing before build, then UAT, QA and a clean handover.", w: "Olivo" },
-        { t: "A monthly management report from finance, operations and sales data.", w: "Brototype" },
-        { t: "Clear ownership, handovers and document control across teams.", w: "Neo Smart" },
-      ],
-    },
-    {
-      t: "Systems",
-      lead: "I take the manual effort out of the business.",
-      pts: [
-        { t: "Manual entry and weekly reports replaced by automation, with limit alerts.", w: "Brototype" },
-        { t: "Messy files turned into one clean financial sheet by script.", w: "Brototype" },
-        { t: "An in-house system for the whole business, rolled out in phases.", w: "Neo Smart" },
-      ],
-    },
-    {
-      t: "Growth",
-      lead: "I help the business be seen, and grow.",
-      pts: [
-        { t: "Website, catalogue, profile and cards brought together as one identity.", w: "Neo Smart" },
-        { t: "Client and stakeholder presentations rebuilt from scratch.", w: "Neo Smart" },
-        { t: "ArabLab coordinated with the team and delivered as a success.", w: "Neo Smart" },
-      ],
-    },
-  ],
-  proof: [
-    { k: "Operations", t: "Running a company\u2019s operation", d: "IT, administration, inventory and HR, beside management." },
-    { k: "Delivery", t: "Client projects, brief to handover", d: "For clients in Saudi Arabia, the Middle East and India." },
-    { k: "Leadership", t: "Teams led, juniors trained", d: "Developers, coordinators and a support team." },
-    { k: "Reporting", t: "Reporting for management", d: "Raw data turned into clear, automated reports." },
-  ],
-  triadTitle: "What a business gets from me.",
-  triadLede: "Everything here is work I have already done.",
-
   education: [
     { t: "Diploma in Data Science", org: "Techolas Technologies, Calicut", when: "2022 to 2023" },
     { t: "BA, English Language and Literature", org: "Jamia Hamdard University, Delhi", when: "2019 to 2022" },
   ],
   contact: {
-    title: "Tell me what you are building.",
-    body: "Whether you need someone to lead your operation and the systems behind it, or a partner for a project, choose the one that fits and send a few lines. I read every message and reply myself.",
+    title: "Let\u2019s talk.",
+    body: "Choose the one that fits. The email opens with a few questions to answer, and I reply personally.",
     paths: [
-      { id: "hire", t: "You are hiring", d: "An operations role, or a conversation about how I could work with your leadership team.", include: ["What your business does", "Where operations feels stretched", "What you want from the role"], cta: "Start the conversation", subject: "A role at our company", body: "Hi Mohammed,\n\nWhat our business does:\n\nWhere operations is stretched:\n\nWhat we want from the role:\n\nBest way to reach me:\n" },
-      { id: "project", t: "You have a project", d: "A website, brand or dashboard, built by me alongside my full-time role.", include: ["What you need built", "Who it is for", "When you need it"], cta: "Send the brief", subject: "A website, brand or dashboard project", body: "Hi Mohammed,\n\nWhat we need built:\n\nWho it is for:\n\nWhen we need it:\n\nBest way to reach me:\n" },
+      { id: "hire", cta: "Discuss a role", subject: "A role at our company", body: "Hi Mohammed,\n\nI would like to discuss a role with you.\n\n1. What does your business do?\n\n2. Where is operations stretched?\n\n3. What do you want from the role?\n\nBest way to reach me:\n" },
+      { id: "project", cta: "Discuss a project", subject: "A website, brand or dashboard project", body: "Hi Mohammed,\n\nI would like to discuss a project with you.\n\n1. What do you need built?\n\n2. Who is it for?\n\n3. When do you need it?\n\nBest way to reach me:\n" },
     ],
-    nextTitle: "What happens next",
-    next: ["You send a few lines.", "I reply personally.", "We talk, and I show how I would approach it."],
   },
 };

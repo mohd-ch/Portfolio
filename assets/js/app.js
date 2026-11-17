@@ -194,13 +194,11 @@
             </div>
           </div>
           <div class="hero-photo"><portrait></portrait></div>
-          <ul class="proof"><li v-for="p in S.proof" :key="p.k"><span class="proof-k">{{ p.k }}</span><b>{{ p.t }}</b><span class="proof-d">{{ p.d }}</span></li></ul>
         </div></section>
 
         <section class="section work" id="work" aria-labelledby="work-t"><div class="wrap">
           <h2 class="big" id="work-t">{{ S.work.title }}</h2>
           <p class="work-lede">{{ S.work.lede }}</p>
-          <ol class="journey"><li v-for="s in S.work.steps" :key="s.y + s.t"><span class="j-y">{{ s.y }}</span><span class="j-t">{{ s.t }}</span></li></ol>
           <ul class="rows">
             <li v-for="t in rows" :key="t.id">
               <button type="button" class="row" :id="'tile-' + t.id" @click="openTile(t.id)" :aria-label="t.title + ', open details'">
@@ -209,8 +207,6 @@
             </li>
           </ul>
         </div></section>
-
-        <triad></triad>
 
         <section class="section how" id="how" aria-labelledby="how-t"><div class="wrap">
           <div class="how-head"><h2 id="how-t" :aria-label="S.how.title"><span class="hl" v-for="l in S.how.lines" :key="l" aria-hidden="true">{{ l }}</span></h2>
@@ -232,26 +228,9 @@
       <section class="contact dark" id="contact" aria-labelledby="contact-t"><div class="wrap">
         <h2 id="contact-t">{{ S.contact.title }}</h2>
         <p class="contact-lede">{{ S.contact.body }}</p>
-        <ul class="paths">
-          <li v-for="p in S.contact.paths" :key="p.id" class="path-card">
-            <h3>{{ p.t }}</h3>
-            <p>{{ p.d }}</p>
-            <div class="inc"><b>In your message, tell me</b><ul><li v-for="i in p.include" :key="i">{{ i }}</li></ul></div>
-            <a class="btn btn-sun" :href="mailto(p)">{{ p.cta }}</a>
-          </li>
-        </ul>
-        <div class="next"><h3>{{ S.contact.nextTitle }}</h3><ol><li v-for="(n, i) in S.contact.next" :key="n"><b>{{ i + 1 }}</b><span>{{ n }}</span></li></ol></div>
-        <div class="direct">
-          <div class="direct-mail">
-            <p class="direct-q">Prefer to write directly?</p>
-            <a class="direct-addr" :href="'mailto:' + S.email">{{ S.email }}</a>
-            <div class="direct-btns"><a class="btn btn-sun" :href="'mailto:' + S.email">Open in mail</a><button type="button" class="btn btn-ghost" @click="copyEmail"><span aria-live="polite">{{ copied ? 'Copied' : 'Copy address' }}</span></button></div>
-          </div>
-          <ul class="direct-links">
-            <li><a :href="S.linkedin" target="_blank" rel="noopener"><small>LinkedIn</small><b>linkedin.com/in/mohammed-c-h</b></a></li>
-            <li><a :href="S.github" target="_blank" rel="noopener"><small>GitHub</small><b>github.com/mohd-ch</b></a></li>
-            <li v-if="cvUrl"><a :href="cvUrl" download><small>Resume</small><b>Download the PDF</b></a></li>
-          </ul>
+        <div class="contact-actions">
+          <a v-for="(p, i) in S.contact.paths" :key="p.id" :class="['btn', i === 0 ? 'btn-sun' : 'btn-ghost']" :href="mailto(p)">{{ p.cta }}</a>
+          <a class="btn btn-ghost" :href="S.linkedin" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div></section>
       <footer class="foot dark"><div class="wrap foot-in"><span>&copy; {{ new Date().getFullYear() }} {{ S.name }}</span><span>Ajman, United Arab Emirates</span></div></footer>
@@ -316,34 +295,6 @@
           <a v-for="n in S.nav.filter(function (x) { return x.cta; })" :key="n.id" :href="'#' + n.id" class="nav-cta" @click="open = false">{{ n.label }}</a>
         </nav>
       </div></header>
-    `,
-  });
-
-  /* The idea behind the work: people, process and systems, with execution at the centre. */
-  /* What a business gets: People, process and systems. One column is lit at a time and they take turns. */
-  app.component("triad", {
-    setup: function () {
-      var cur = ref(0);
-      var paused = false, timer = null;
-      var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      function go() { if (!paused) cur.value = (cur.value + 1) % S.triad.length; }
-      onMounted(function () { if (!calm) timer = setInterval(go, 3800); });
-      onBeforeUnmount(function () { if (timer) clearInterval(timer); });
-      return {
-        T: S.triad, title: S.triadTitle, lede: S.triadLede, cur: cur, calm: calm,
-        hold: function (i) { paused = true; cur.value = i; },
-        free: function () { paused = false; },
-      };
-    },
-    template: `
-      <section class="section trio" aria-labelledby="trio-t"><div class="wrap">
-        <h2 class="big" id="trio-t">{{ title }}</h2>
-        <p class="trio-lede">{{ lede }}</p>
-        <ul class="trio-cards" @mouseleave="free" @focusout="free">
-          <li v-for="(n, i) in T" :key="n.t" :class="['tc', { on: calm || cur === i }]" tabindex="0" @mouseenter="hold(i)" @focus="hold(i)"><h3>{{ n.t }}</h3><b>{{ n.lead }}</b><ul class="tc-pts"><li v-for="p in n.pts" :key="p.t"><span>{{ p.t }}</span><em>{{ p.w }}</em></li></ul></li>
-        </ul>
-        <div class="trio-cta"><p>Want this in your business?</p><a class="btn btn-sun" href="#contact">Tell me what you are building</a></div>
-      </div></section>
     `,
   });
 

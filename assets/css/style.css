@@ -108,7 +108,7 @@ button { font: inherit; color: inherit; }
 
 /* ---------- Hero ---------- */
 .hero { color: #fff; padding-block: clamp(36px, 5vw, 72px) 0; background: radial-gradient(560px circle at var(--mx, 78%) var(--my, 22%), rgba(196, 164, 106, 0.18), transparent 62%), var(--navy); }
-.intro { margin-bottom: clamp(24px, 3.4vw, 40px); padding-bottom: clamp(20px, 3vw, 36px); border-bottom: 1px solid rgba(255, 255, 255, 0.22); }
+.intro { margin-bottom: clamp(14px, 1.8vw, 22px); padding-bottom: clamp(12px, 1.6vw, 18px); border-bottom: 1px solid rgba(255, 255, 255, 0.22); }
 .hero-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 0 clamp(32px, 6vw, 80px); align-items: stretch; }
 .hero-copy { padding-bottom: clamp(8px, 2vw, 24px); }
 .hero-copy .lede { max-width: 33em; }
@@ -120,7 +120,7 @@ button { font: inherit; color: inherit; }
 .intro-name { font-size: var(--t-name); line-height: 1; letter-spacing: -0.025em; }
 .hero h1 { font-size: var(--t-hero); line-height: 1.04; letter-spacing: -0.025em; }
 .hero h1 .hl { display: block; }
-.hero-side { display: grid; gap: 28px; justify-items: start; margin-top: clamp(24px, 3vw, 36px); }
+.hero-side { display: grid; gap: 22px; justify-items: start; margin-top: clamp(16px, 2vw, 24px); }
 .lede { font-size: var(--t-lead); line-height: 1.55; max-width: 30em; color: rgba(255, 255, 255, 0.9); }
 .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; }
 .portrait { position: relative; width: 100%; min-height: 420px; border-radius: var(--r-lg); overflow: hidden; margin: 0; box-shadow: 0 28px 60px rgba(0, 0, 0, 0.35); }
@@ -137,7 +137,7 @@ button { font: inherit; color: inherit; }
 .proof-k { font-size: 0.88rem; font-weight: 600; color: var(--brass-d); }
 .proof b { font-family: var(--display); font-size: clamp(1.25rem, 1.7vw, 1.5rem); font-weight: 500; line-height: 1.18; letter-spacing: -0.015em; }
 .proof-d { font-size: 0.95rem; line-height: 1.5; color: var(--muted); }
-.work { padding-top: calc(var(--sec) + clamp(52px, 6vw, 76px)); }
+
 
 /* ---------- Work ---------- */
 .work-lede { max-width: 32em; margin: 16px 0 var(--head-gap); color: var(--muted); font-size: var(--t-lead); line-height: 1.5; }
@@ -436,3 +436,9 @@ p, .lede, .row-s, .hs-d, .proof-d, .tc-pts li span { text-wrap: pretty; }
   .row-tag, .row-t, .row-s, .row-go { grid-column: 1; grid-row: auto; }
   .row-go { justify-self: start; margin-top: 4px; }
 }
+
+/* Simplified contact + tighter hero */
+.contact-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: clamp(28px, 3.4vw, 40px); }
+.contact .contact-lede { max-width: 30em; }
+.contact h2 { max-width: none; }
+.hero { padding-bottom: clamp(48px, 5vw, 72px); }
