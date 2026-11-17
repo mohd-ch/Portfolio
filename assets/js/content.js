@@ -95,7 +95,9 @@ window.SITE = {
       },
     ],
     visual: {
-      title: "The home page and About page, before and after",
+      title: "About page, before and after",
+      homeTitle: "Home page, before and after",
+      logoTitle: "Logo, before and after",
       home: {
         before: {
           base: "assets/img/neosmart-home-before",
@@ -113,20 +115,20 @@ window.SITE = {
       before: {
         base: "assets/img/neosmart-about-before",
         alt: "Archived Neo Smart company overview page, written as paragraphs only",
-        t: "Before: paragraphs only",
-        d: "A written company overview, from an archive of the old site. Range, industries and support were all in running text.",
+        t: "Before: a written overview",
+        d: "From an archive of the old site. Range, industries and support were all in paragraphs.",
       },
       after: {
         base: "assets/img/neosmart-about-after",
         alt: "Neo Smart About page today, with positioning and proof points",
-        t: "After: positioning and proof, up front",
-        d: "What the company is, what it supplies and the numbers behind it, in one clear opening.",
+        t: "After: one structured page",
+        d: "The new About page brings Neo Smart\u2019s capabilities, mission, vision and five-step delivery process together in one place.",
       },
       process: {
         base: "assets/img/neosmart-process-after",
         alt: "Neo Smart five-step delivery process from understanding the requirement to support",
-        t: "The delivery process, made visible",
-        d: "Understand, source and configure, deliver and install, commission and train, support and maintain. A customer can see what happens after they enquire.",
+        t: "The five-step delivery process",
+        d: "Understand, source and configure, deliver and install, commission and train, support and maintain, so a customer can see what happens after they enquire.",
       },
       logos: [
         { base: "assets/img/neosmart-logo-before", alt: "Neo Smart earlier stacked flask logo", t: "Earlier logo", d: "A stacked flask emblem with the company name beneath." },

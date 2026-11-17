@@ -264,14 +264,16 @@
             <div class="sheet-parts"><article v-for="x in S.repositioning.parts" :key="x.t"><h3>{{ x.t }}</h3><p>{{ x.p }}</p></article></div>
             <h3 class="sheet-h">{{ S.repositioning.visual.title }}</h3>
             <div class="ba">
-              <case-shot kind="before" optional :base="S.repositioning.visual.home.before.base" :alt="S.repositioning.visual.home.before.alt" :caption="S.repositioning.visual.home.before.t" :text="S.repositioning.visual.home.before.d"></case-shot>
-              <case-shot kind="after" optional :base="S.repositioning.visual.home.after.base" :alt="S.repositioning.visual.home.after.alt" :caption="S.repositioning.visual.home.after.t" :text="S.repositioning.visual.home.after.d"></case-shot>
-            </div>
-            <div class="ba">
               <case-shot kind="before" optional :base="S.repositioning.visual.before.base" :alt="S.repositioning.visual.before.alt" :caption="S.repositioning.visual.before.t" :text="S.repositioning.visual.before.d"></case-shot>
               <case-shot kind="after" optional :base="S.repositioning.visual.after.base" :alt="S.repositioning.visual.after.alt" :caption="S.repositioning.visual.after.t" :text="S.repositioning.visual.after.d"></case-shot>
             </div>
             <div class="ba stack"><case-shot kind="plain" optional :base="S.repositioning.visual.process.base" :alt="S.repositioning.visual.process.alt" :caption="S.repositioning.visual.process.t" :text="S.repositioning.visual.process.d"></case-shot></div>
+            <h3 class="sheet-h">{{ S.repositioning.visual.homeTitle }}</h3>
+            <div class="ba">
+              <case-shot kind="before" optional :base="S.repositioning.visual.home.before.base" :alt="S.repositioning.visual.home.before.alt" :caption="S.repositioning.visual.home.before.t" :text="S.repositioning.visual.home.before.d"></case-shot>
+              <case-shot kind="after" optional :base="S.repositioning.visual.home.after.base" :alt="S.repositioning.visual.home.after.alt" :caption="S.repositioning.visual.home.after.t" :text="S.repositioning.visual.home.after.d"></case-shot>
+            </div>
+            <h3 class="sheet-h">{{ S.repositioning.visual.logoTitle }}</h3>
             <div class="ba logos"><case-shot v-for="g in S.repositioning.visual.logos" :key="g.base" kind="plain" optional :base="g.base" :alt="g.alt" :caption="g.t" :text="g.d"></case-shot></div>
             <h3 class="sheet-h">{{ S.repositioning.delivered.t }}</h3>
             <ul class="deliv two"><li v-for="i in S.repositioning.delivered.items" :key="i.t"><b>{{ i.t }}</b><span>{{ i.d }}</span></li></ul>
