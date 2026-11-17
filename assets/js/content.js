@@ -29,11 +29,11 @@ window.SITE = {
   neoCase: {
     eyebrow: "Neo Smart \u00b7 Now",
     title: "Building the systems behind a growing business",
-    role: "Operations Coordinator at Neo Smart. I run IT and administration, work with management on how the business should run as it scales, and advise the core team where it helps.",
+    role: "Operations Coordinator at Neo Smart, a laboratory equipment supplier serving the GCC and beyond. I run IT and administration, work with management on how the business should run as it scales, and advise the core team where it helps.",
     parts: [
       {
         t: "Business challenge",
-        p: "As the business grew, work had to move cleanly between sales, warehouse, service and accounts, and management needed a clear view of how it was moving.",
+        p: "As the business grew, work had to move cleanly between sales, warehouse, service and accounts, across a wide range of equipment and partner brands, and management needed a clear view of how it was moving.",
       },
       {
         t: "My recommendation",
@@ -79,7 +79,7 @@ window.SITE = {
   repositioning: {
     eyebrow: "Neo Smart \u00b7 Brand",
     title: "Making a whole company visible, not just its products",
-    lede: "Neo Smart had been presented product by product. The company could support a complete laboratory project, through sourcing, installation, qualification, training and ongoing technical support, but that range was easy to miss.",
+    lede: "Neo Smart supplies laboratories across 17 product families, but had been presented product by product. The company could support a complete laboratory project, through sourcing, installation, qualification, training and ongoing technical support, but that range was easy to miss.",
     parts: [
       {
         t: "Business challenge",
@@ -91,7 +91,7 @@ window.SITE = {
       },
       {
         t: "The site today",
-        p: "The About page now states what the company is, shows its delivery process in five clear steps, from the first requirement to ongoing support, and the site offers one clear way to ask for a quote.",
+        p: "The range now sits in 17 product families, with partner lines such as VWR and Hitachi and real specifications on featured products. The About page states what the company is and shows its delivery process in five clear steps, from the first requirement to ongoing support. Customers get one clear route to request a quote or book a demo.",
       },
     ],
     visual: {
@@ -162,8 +162,8 @@ window.SITE = {
     title: "The journey so far",
     lede: "Start with where I am now, then see the whole story in the order it happened.",
     featured: [
-      { id: "case", tag: "Neo Smart \u00b7 Now", t: "Running the operation as the business scales", d: "I run IT, administration, inventory and HR, and built the in-house system management reads the business from.", proof: "Live now: document and compliance tracking, with expired and upcoming renewals at the top.", cta: "Read the case" },
-      { id: "positioning", tag: "Neo Smart \u00b7 Brand", t: "Making a whole company visible", d: "Website, catalogue, company profile and cards brought together as one identity, and ArabLab coordinated.", proof: "The About page now shows how a project is delivered, in five clear steps.", cta: "Read the case" },
+      { id: "case", tag: "Neo Smart \u00b7 Now", t: "Running the operation as the business scales", d: "I run IT, administration, inventory and HR for a laboratory equipment company serving the GCC and beyond, and built the in-house system management reads the business from.", proof: "Live now: document and compliance tracking, with expired and upcoming renewals at the top.", cta: "Read the case" },
+      { id: "positioning", tag: "Neo Smart \u00b7 Brand", t: "Making the range, and the company, easy to trust", d: "A 17-family range, partner lines and a full project service, presented as one brand across the website, catalogue, profile and events.", proof: "The About page now shows how a project is delivered, in five clear steps.", cta: "Read the case" },
     ],
     allLabel: "The full story, in order",
   },
@@ -263,7 +263,7 @@ window.SITE = {
     paras: [
       "I am drawn to the space between teams, where work gets lost and nobody sees the full picture. That is where I do my best work.",
       "I started technical, with BIM, data science and then software delivery. That lets me talk to developers and still think like management.",
-      "Today I am the Operations Coordinator at a laboratory equipment company in Ajman: IT, administration, inventory and HR, and working with management on how the business should run as it scales.",
+      "Today I am the Operations Coordinator at a laboratory equipment company in Ajman that supplies laboratories across the GCC and beyond. I run IT, administration, inventory and HR, and work with management on how the business should run as it scales, from the systems to the way the company presents itself.",
     ],
     aimLabel: "My aim",
     aim: "To build and lead the operations of a growing business: its people, process and systems.",
@@ -315,10 +315,10 @@ window.SITE = {
 
   /* Short lines shown on the project tiles. Facts only, taken from the detail text. */
   tileShort: {
-    case: "IT, administration, inventory and HR, with the in-house system behind them.",
-    positioning: "Website, catalogue, cards and events brought together as one brand.",
-    delivery: "First meeting to approved requirements, UAT, QA and handover.",
-    support: "Led the team, then built the management report, analysis and automation.",
+    case: "IT, administration, inventory and HR for a company supplying laboratories across the GCC and beyond.",
+    positioning: "A 17-family range and a whole company made easy to understand, across website, catalogue and events.",
+    delivery: "From the first client meeting to approved requirements, UAT, QA and handover, for clients across the Middle East and India.",
+    support: "Led the team and trained juniors, then built the management report, margin analysis and automation behind it.",
     bim: "Client needs turned into requirements, then into interactive 3D.",
     catalogue: "A quote-first site: customers send a part number, drawing or list and get an offer back.",
     dashboard: "A Power BI view that lets a corporate team read sales performance at a glance.",
