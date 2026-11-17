@@ -346,10 +346,10 @@ window.SITE = {
   ],
   contact: {
     title: "Tell me what you are building.",
-    body: "If you want someone who can lead the operation and the systems behind it, or a partner for a project, start with a few lines. I read every message and reply myself.",
+    body: "Whether you need someone to lead your operation and the systems behind it, or a partner for a project, choose the one that fits and send a few lines. I read every message and reply myself.",
     paths: [
-      { id: "hire", t: "I am hiring", d: "An operations role, or a conversation about how I could work with your leadership team.", include: ["What your business does", "Where operations is stretched", "What you want from the role"], cta: "Start the conversation", subject: "A role at our company", body: "Hi Mohammed,\n\nWhat our business does:\n\nWhere operations is stretched:\n\nWhat we want from the role:\n\nBest way to reach me:\n" },
-      { id: "project", t: "I have a project", d: "A website, brand or dashboard, built alongside my full-time role.", include: ["What you need built", "Who it is for", "When you need it"], cta: "Send the brief", subject: "A website, brand or dashboard project", body: "Hi Mohammed,\n\nWhat we need built:\n\nWho it is for:\n\nWhen we need it:\n\nBest way to reach me:\n" },
+      { id: "hire", t: "You are hiring", d: "An operations role, or a conversation about how I could work with your leadership team.", include: ["What your business does", "Where operations feels stretched", "What you want from the role"], cta: "Start the conversation", subject: "A role at our company", body: "Hi Mohammed,\n\nWhat our business does:\n\nWhere operations is stretched:\n\nWhat we want from the role:\n\nBest way to reach me:\n" },
+      { id: "project", t: "You have a project", d: "A website, brand or dashboard, built by me alongside my full-time role.", include: ["What you need built", "Who it is for", "When you need it"], cta: "Send the brief", subject: "A website, brand or dashboard project", body: "Hi Mohammed,\n\nWhat we need built:\n\nWho it is for:\n\nWhen we need it:\n\nBest way to reach me:\n" },
     ],
     nextTitle: "What happens next",
     next: ["You send a few lines.", "I reply personally.", "We talk, and I show how I would approach it."],

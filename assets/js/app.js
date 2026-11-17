@@ -236,7 +236,7 @@
           <li v-for="p in S.contact.paths" :key="p.id" class="path-card">
             <h3>{{ p.t }}</h3>
             <p>{{ p.d }}</p>
-            <div class="inc"><b>A few lines on</b><ul><li v-for="i in p.include" :key="i">{{ i }}</li></ul></div>
+            <div class="inc"><b>In your message, tell me</b><ul><li v-for="i in p.include" :key="i">{{ i }}</li></ul></div>
             <a class="btn btn-sun" :href="mailto(p)">{{ p.cta }}</a>
           </li>
         </ul>
