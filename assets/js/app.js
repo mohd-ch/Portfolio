@@ -78,7 +78,7 @@
     ];
     var roleIds = ["delivery", "support", "bim"], roleArt = ["timeline", "steps", "cube"];
     S.roles.cards.forEach(function (c, i) {
-      list.push({ id: roleIds[i], kind: "card", size: "md", art: roleArt[i], tag: c.tag, title: c.t, meta: c.client, short: short[roleIds[i]], d: c.d, points: c.points });
+      list.push({ id: roleIds[i], kind: "card", size: "md", art: roleArt[i], tag: c.tag, title: c.t, meta: c.client, short: short[roleIds[i]], d: c.d, points: c.points, seq: c.seq, pointsTitle: c.pointsTitle });
     });
     var fIds = ["catalogue", "dashboard"], fArt = ["grid", "bars"];
     S.freelance.cards.forEach(function (c, i) {
@@ -283,7 +283,8 @@
           <template v-else>
             <p class="meta" v-if="!cur.points">{{ cur.meta }}</p>
             <p class="sheet-lede">{{ cur.d }}</p>
-            <ul class="deliv pts" v-if="cur.points"><li v-for="p in cur.points" :key="p.t"><b>{{ p.t }}</b><span>{{ p.d }}</span></li></ul>
+            <h3 class="sheet-h" v-if="cur.pointsTitle">{{ cur.pointsTitle }}</h3>
+            <ul class="deliv pts" :class="{ seq: cur.seq }" v-if="cur.points"><li v-for="p in cur.points" :key="p.t"><b>{{ p.t }}</b><span>{{ p.d }}</span></li></ul>
             <a v-if="cur.link" class="btn btn-solid" :href="cur.link.href" target="_blank" rel="noopener">{{ cur.link.label }}</a>
           </template>
         </div>

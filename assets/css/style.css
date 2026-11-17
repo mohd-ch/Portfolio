@@ -498,3 +498,9 @@ p, .lede, .row-s, .hs-d, .proof-d, .tc-pts li span { text-wrap: pretty; }
   .deliv.two { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 640px) { .status-lead { border-bottom: 0; padding-bottom: 0; } }
+/* Numbered sequence (Olivo): the steps really are in order */
+.deliv.seq { counter-reset: st; }
+.deliv.seq li { counter-increment: st; padding-left: 52px; }
+.deliv.seq li::after { content: counter(st); position: absolute; left: 0; top: 16px; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: #fff; font-family: var(--display); font-size: 1.1rem; line-height: 1; }
+.sheet-h + .deliv.seq { margin-top: 16px; }
+@media (max-width: 640px) { .deliv.seq li { padding-left: 48px; } }

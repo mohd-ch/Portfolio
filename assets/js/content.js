@@ -276,15 +276,18 @@ window.SITE = {
     cards: [
       {
         tag: "Olivo \u00b7 2026",
-        t: "Taking client projects from first brief to handover",
+        t: "Leading client software projects from first brief to handover",
         client: "Olivo \u00b7 Apr to Jul 2026",
-        d: "I sat with clients to understand what they really needed, recommended the solution that fitted, and ran the project through to a signed-off handover. The clients were in Saudi Arabia, other Middle Eastern markets and India.",
+        d: "I led a team of six to eight, developers and coordinators, and owned each client project from the first meeting to a signed-off handover. The clients were in Saudi Arabia, other Middle Eastern markets and India. I met them, advised the right solution, got the requirements approved in writing, and kept everyone on time with no surprises.",
+        seq: true,
+        pointsTitle: "How I ran a project",
         points: [
-          { t: "Requirements and approval", d: "Met clients, advised the best-fit solution, then wrote the meeting minutes and the business requirements document and got client approval before anything was built." },
-          { t: "Brief to developers", d: "Explained what was needed to the developers, wrote the functional requirements document, split the work and assigned it with time frames." },
-          { t: "No surprises", d: "Updated clients on progress, followed up with the developers, and told the client early about any blocker." },
-          { t: "Quality and release", d: "UAT and QA, then release and handover." },
-          { t: "App projects", d: "Checked the Figma designs against the functionality so nothing was missed on the functional side." },
+          { t: "Understand and advise", d: "Met the client, understood what they really needed and recommended the best-fit solution." },
+          { t: "Approve in writing", d: "Wrote the meeting minutes and the business requirements document, and got client approval before anything was built." },
+          { t: "Brief the developers", d: "Explained the need to the developers and wrote the functional requirements document." },
+          { t: "Plan and assign", d: "Split the work, assigned it with time frames and followed up. On app projects I also checked the Figma designs against the functionality." },
+          { t: "Keep the client informed", d: "Gave regular progress updates, and warned the client early about any blocker." },
+          { t: "Test and release", d: "UAT and QA, then release and a clean handover." },
         ],
       },
       {
@@ -319,7 +322,7 @@ window.SITE = {
   tileShort: {
     case: "IT, administration, inventory and HR for a company supplying laboratories across the GCC and beyond.",
     positioning: "A 17-family range and a whole company made easy to understand, across website, catalogue and events.",
-    delivery: "From the first client meeting to approved requirements, UAT, QA and handover, for clients across the Middle East and India.",
+    delivery: "Led developers and coordinators on client software projects, from first meeting to approved requirements, UAT, QA and handover.",
     support: "Led the team and trained juniors, then built the management report, margin analysis and automation behind it.",
     bim: "Client needs turned into requirements, then into interactive 3D.",
     catalogue: "A quote-first site: customers send a part number, drawing or list and get an offer back.",
