@@ -193,6 +193,21 @@ window.SITE = {
     ],
   },
 
+  nexa: {
+    tag: "Neo Smart group \u00b7 NexaBio",
+    client: "NexaBio Scientific, Ajman",
+    t: "A sister company\u2019s brand and website, built from scratch",
+    d: "NexaBio supplies products, installation, training and service to bio, pharma, medical and research customers, and is part of the Neo Smart family. I built its brand and website from nothing, from the logo to the live site, so the company is understood at a glance and a customer can ask for a quote in one step.",
+    pointsTitle: "What I built",
+    points: [
+      { t: "The identity", d: "The NexaBio name, logo and look, made from scratch." },
+      { t: "One clear promise", d: "Scientific and laboratory solutions, from one consumable to a full setup." },
+      { t: "How it works, in five steps", d: "Understand the goal, match the products, send one written quotation, deliver and install, then train, service and resupply." },
+      { t: "Two ways in", d: "Visitors choose where they are: buying single items or repeat orders, or building or upgrading a lab." },
+      { t: "A range that is easy to enquire about", d: "Eight product families with featured products, and a quotation by form, email, call or WhatsApp." },
+    ],
+    link: { href: "https://nexabioscientific.com/", label: "Visit the site" },
+  },
   freelance: {
     title: "Projects I take on",
     lede: "Alongside my full-time role, I build websites, marketing and dashboards for businesses.",
@@ -325,6 +340,7 @@ window.SITE = {
     delivery: "Led developers and coordinators on client software projects, from first meeting to approved requirements, UAT, QA and handover.",
     support: "Led the team and trained juniors, then built the management report, margin analysis and automation behind it.",
     bim: "Client needs turned into requirements, then into interactive 3D.",
+    nexa: "Brand and website built from scratch for a sister company, from the logo to the live site.",
     catalogue: "A quote-first site: customers send a part number, drawing or list and get an offer back.",
     dashboard: "A Power BI view that lets a corporate team read sales performance at a glance.",
   },

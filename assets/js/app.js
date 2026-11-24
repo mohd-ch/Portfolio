@@ -84,7 +84,8 @@
     S.freelance.cards.forEach(function (c, i) {
       list.push({ id: fIds[i], kind: "card", size: "half", art: fArt[i], tag: c.tag, title: c.t, meta: c.client, short: short[fIds[i]], d: c.d, link: c.link });
     });
-    var order = ["support", "bim", "delivery", "case", "positioning", "catalogue", "dashboard"];
+    list.push({ id: "nexa", kind: "card", size: "md", art: "layers", tag: S.nexa.tag, title: S.nexa.t, meta: S.nexa.client, short: short.nexa, d: S.nexa.d, points: S.nexa.points, pointsTitle: S.nexa.pointsTitle, link: S.nexa.link });
+    var order = ["support", "bim", "delivery", "case", "positioning", "nexa", "catalogue", "dashboard"];
     return order.map(function (id) { return list.filter(function (t) { return t.id === id; })[0]; });
   }
 
